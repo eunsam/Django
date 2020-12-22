@@ -6,6 +6,7 @@
     <title>Title</title>
   </head>
   <body>
+    <div align="center" style="border: 1px solid #48BAE4; height: 350px;">
     <p>Student Info</p>
     {% if student_info %}
       name : {{student_info.s_name}}</br>
@@ -20,5 +21,6 @@
     <a href="{% url 'students:stuDel' student_info.s_name %}">삭제</a>
     <a href="{% url 'students:stuAll' %}">학생 리스트</a>
     <a href="{% url 'students:reg' %}">신규학생등록</a>
+  </div>
   </body>
 </html>

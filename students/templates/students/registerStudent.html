@@ -6,18 +6,17 @@
     <title>Title</title>
   </head>
   <body>
-    <p>Register Student</p>
-    {% if student_list %}
-
+    <div align="center" style="border: 1px solid #48BAE4; height: 350px;">
+    <p>Register Student</p></br>
     <form action="{% url 'students:regCon' %}" method="post">
     {% csrf_token %}
-        name : <input type="text" name="name"></br>
-        major : <input type="text" name="major"></br>
-        age : <input type="text" name="age"></br>
-        grade : <input type="text" name="grade"></br>
-        gender : <input type="text" name="gender"></br>
-        <input type="submit" name="Register"></br>
+        <pre>name   : <input type="text" name="name" placeholder="이름을 입력하세요" size="13" style="font-size:10pt; color:black"></pre>
+        <pre>major  : <input type="text" name="major" placeholder="전공을 입력하세요" size="13" style="font-size:10pt; color:black"></pre>
+        <pre>age    : <input type="text" name="age" placeholder="나이를 입력하세요" size="13" style="font-size:10pt; color:black"></pre>
+        <pre>grade  : <input type="text" name="grade" placeholder="학년을 입력하세요" size="13" style="font-size:10pt; color:black"></pre>
+        <pre>gender : <input type="text" name="gender" placeholder="성별을 입력하세요" size="13" style="font-size:10pt; color:black"></pre></br>
+        <input type="submit" name="Register" style="color:#042AaC"></br>
     </form>
-    {% endif %}
+  </div>
   </body>
 </html>

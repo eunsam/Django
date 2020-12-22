@@ -6,9 +6,9 @@
     <title>Title</title>
   </head>
   <body>
+    <div align="center" style="border: 1px solid #48BAE4; height: 350px;">
     <p>Read Student</p>
     {% if student_list %}
-    <ol>
       {% for s in student_list %}
       <li>
         <a href="{% url 'students:stuDet' s.s_name %}">{{s.s_name}}</a>
@@ -16,11 +16,11 @@
         <a href="{% url 'students:stuDel' s.s_name %}">삭제</a>
       </li>
       {% endfor %}
-    </ol>
     {% else %}
       <p>Stuent : 0</p>
     {% endif %}
     </br>
     <a href="{% url 'students:reg' %}">신규학생등록</a>
+  </div>
   </body>
 </html>
